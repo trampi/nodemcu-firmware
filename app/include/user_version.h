@@ -14,7 +14,7 @@
 #define NODE_VERSION		"NodeMCU " ESP_SDK_VERSION_STRING "." NODE_VERSION_XSTR(NODE_VERSION_INTERNAL)
 
 #ifndef BUILD_DATE
-#define BUILD_DATE		"unspecified"
+#define BUILD_DATE		"trampi " __TIME__
 #endif
 
 extern char SDK_VERSION[];
