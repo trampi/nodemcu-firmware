@@ -1,7 +1,7 @@
 sdk/
 cache/
 .ccache/
-user_config.h
+#user_config.h
 server-ca.crt
 
 #ignore Eclipse project files
