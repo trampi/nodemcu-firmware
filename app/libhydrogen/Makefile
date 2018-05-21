@@ -12,7 +12,8 @@
 #     a generated lib/image xxx.a ()
 #
 ifndef PDIR
-GEN_LIBS = libmodules.a
+GEN_LIBS = libhydrogen.a
+CSRCS = hydrogen.c
 endif
 
 STD_CFLAGS=-std=gnu11 -Wimplicit
@@ -24,7 +25,7 @@ STD_CFLAGS=-std=gnu11 -Wimplicit
 #   makefile at its root level - these are then overridden
 #   for a subtree within the makefile rooted therein
 #
-#DEFINES += 
+DEFINES += -DNODEMCU
 
 #############################################################
 # Recursion Magic - Don't touch this!!
@@ -41,23 +42,7 @@ STD_CFLAGS=-std=gnu11 -Wimplicit
 INCLUDES := $(INCLUDES) -I $(PDIR)include
 INCLUDES += -I ./
 INCLUDES += -I ../libc
-INCLUDES += -I ../coap
-INCLUDES += -I ../mqtt
-INCLUDES += -I ../u8glib
-INCLUDES += -I ../ucglib
 INCLUDES += -I ../lua
-INCLUDES += -I ../pcm
-INCLUDES += -I ../platform
-INCLUDES += -I ../spiffs
-INCLUDES += -I ../smart
-INCLUDES += -I ../dhtlib
-INCLUDES += -I ../fatfs
-INCLUDES += -I ../http
-INCLUDES += -I ../sjson
-INCLUDES += -I ../websocket
-INCLUDES += -I ../pm
-INCLUDES += -I ../sqlite3
-INCLUDES += -I ../libhydrogen
 PDIR := ../$(PDIR)
 sinclude $(PDIR)Makefile
 

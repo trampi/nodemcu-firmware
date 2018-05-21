@@ -51,7 +51,8 @@ SUBDIRS= 					\
 	pm					\
 	sjson					\
  	sqlite3					\
-	
+ 	libhydrogen				\
+
 
 endif # } PDIR
 
@@ -106,7 +107,8 @@ COMPONENTS_eagle.app.v6 = 			\
 	misc/libmisc.a				\
 	sjson/libsjson.a			\
   sqlite3/libsqlite3.a			\
-	
+	libhydrogen/libhydrogen.a	\
+
 
 # Inspect the modules library and work out which modules need to be linked.
 # For each enabled module, a symbol name of the form XYZ_module_selected is

@@ -149,8 +149,7 @@
 #undef MBEDTLS_SSL_PROTO_SSL3
 #define MBEDTLS_SSL_PROTO_TLS1
 #define MBEDTLS_SSL_PROTO_TLS1_1
-//#define MBEDTLS_SSL_PROTO_TLS1_2
-#undef MBEDTLS_SSL_PROTO_TLS1_2
+#define MBEDTLS_SSL_PROTO_TLS1_2
 #undef MBEDTLS_SSL_PROTO_DTLS
 
 #define MBEDTLS_SSL_ALPN
@@ -244,7 +243,7 @@
 #define MBEDTLS_XTEA_C
 
 #define MBEDTLS_MPI_WINDOW_SIZE            1 /**< Maximum windows size used. */
-#define MBEDTLS_MPI_MAX_SIZE             256 /**< Maximum number of bytes for usable MPIs. */
+#define MBEDTLS_MPI_MAX_SIZE             512 /**< Maximum number of bytes for usable MPIs. */
 
 //#define MBEDTLS_CTR_DRBG_ENTROPY_LEN               48 /**< Amount of entropy used per seed by default (48 with SHA-512, 32 with SHA-256) */
 #define MBEDTLS_CTR_DRBG_RESEED_INTERVAL         1000 /**< Interval before reseed is performed by default */
@@ -257,7 +256,7 @@
 //#define MBEDTLS_HMAC_DRBG_MAX_REQUEST        1024 /**< Maximum number of requested bytes per call */
 //#define MBEDTLS_HMAC_DRBG_MAX_SEED_INPUT      384 /**< Maximum size of (re)seed buffer */
 
-#define MBEDTLS_ECP_MAX_BITS             224 /**< Maximum bit size of groups */
+//#define MBEDTLS_ECP_MAX_BITS             521 /**< Maximum bit size of groups */
 #define MBEDTLS_ECP_WINDOW_SIZE            2 /**< Maximum window size used */
 #define MBEDTLS_ECP_FIXED_POINT_OPTIM      0 /**< Enable fixed-point speed-up */
 
@@ -312,5 +311,3 @@ extern unsigned int max_content_len;
 //#define MBEDTLS_SSL_CIPHERSUITES MBEDTLS_TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,MBEDTLS_TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256
 #define MBEDTLS_X509_MAX_INTERMEDIATE_CA   3   /**< Maximum number of intermediate CAs in a verification chain. */
 //#define MBEDTLS_X509_MAX_FILE_PATH_LEN     512 /**< Maximum length of a path/filename string in bytes including the null terminator character ('\0'). */
-
-#include "mbedtls/check_config.h"
